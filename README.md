@@ -1,4 +1,3 @@
-# image-url
 Intervention Image Extension URL Method for Laravel 4
 
 [![Total Downloads](https://poser.pugx.org/rasim/image/downloads.svg)](https://packagist.org/packages/rasim/image) 
