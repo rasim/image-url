@@ -21,11 +21,7 @@ class ImageServiceProvider extends ServiceProvider {
 	{
 		$this->package('rasim/image');
 
-        $app = $this->app;
 
-        $app['image'] = $app->share(function ($app) {
-            return new Images($app['config']->get('image::config'));
-        });
 
 	}
 
@@ -37,7 +33,11 @@ class ImageServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-        
+		$app = $this->app;
+
+	        $app['image'] = $app->share(function ($app) {
+	            return new Images($app['config']->get('image::config'));
+	        }); 
 
 	}
 
